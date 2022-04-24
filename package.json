@@ -1,0 +1,23 @@
+{
+  "name": "teste_work",
+  "version": "1.0.0",
+  "description": "Hi",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luiz-fischer/Nova-pasta--2-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luiz-fischer/Nova-pasta--2-/issues"
+  },
+  "homepage": "https://github.com/luiz-fischer/Nova-pasta--2-#readme",
+  "dependencies": {
+    "lint": "^0.7.0",
+    "node": "^17.7.2"
+  }
+}
