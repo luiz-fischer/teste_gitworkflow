@@ -1,7 +1,9 @@
-const http = require('http');
+import { createServer } from 'http';
+import process from 'dotenv'
+
 const port = process.env.PORT || 3000;
 
-const server = http.createServer((req, res) => {
+const server = createServer((req, res) => {
   res.statusCode = 200;
   const msg = 'Hello Node!\n'
   res.end(msg);
