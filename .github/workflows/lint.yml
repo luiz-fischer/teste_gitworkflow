@@ -1,32 +1,16 @@
-name: Lint
-
-on:
-  pull_request:
-  push:
-    branches:
-      - master
-
-jobs:
-  eslint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - run: npm ci # or yarn install
-      - uses: sibiraj-s/action-eslint@v2
-
-      - name: eslint-remote-tester PR comparator
-        uses: AriPerkkio/eslint-remote-tester-compare-action@v2
-
-      - name: eslint-remote-tester runner
-        uses: AriPerkkio/eslint-remote-tester-run-action@v3
-
-        with:
-          # github-token: ${{ secrets.GITHUB_TOKEN }} # Optional
-          eslint-args: '--ignore-path=.gitignore --quiet'
-          extensions: 'js,jsx,ts,tsx'
-          annotations: true
-
-
+name: Run ESLint
+description: Run ESLint on JavaScript files
+author: stefanoeb
+inputs:
+  files:
+    description: Blob of files to lint
+    required: false
+    default: '.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.files }}
+branding: 
+  icon: circle
+  color: purple
