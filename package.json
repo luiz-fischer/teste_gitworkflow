@@ -1,23 +1,24 @@
 {
-  "name": "teste_work",
+  "name": "node-hello",
   "version": "1.0.0",
-  "description": "Hi",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test"
+    "start": "node index.js",
+    "lint": "eslint"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luiz-fischer/Nova-pasta--2-.git"
+    "url": "git+https://github.com/johnpapa/node-hello.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/luiz-fischer/Nova-pasta--2-/issues"
+    "url": "https://github.com/johnpapa/node-hello/issues"
   },
-  "homepage": "https://github.com/luiz-fischer/Nova-pasta--2-#readme",
+  "homepage": "https://github.com/johnpapa/node-hello#readme",
   "dependencies": {
-    "lint": "^0.7.0",
-    "node": "^17.7.2"
+    "eslint": "^8.14.0"
   }
 }
