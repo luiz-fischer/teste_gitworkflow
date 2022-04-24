@@ -1,0 +1,23 @@
+on:
+  pull_request:
+    types:
+      - opened
+jobs:
+  run_if:
+    if:  startsWith(github.head_ref, 'feat/')
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "The head of this PR starts with 'feat/'"
+      
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  if_merged:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo The PR was merged
