@@ -16,8 +16,17 @@ jobs:
           node-version: 16
       - run: npm ci # or yarn install
       - uses: sibiraj-s/action-eslint@v2
+
+      - name: eslint-remote-tester PR comparator
+        uses: AriPerkkio/eslint-remote-tester-compare-action@v2
+
+      - name: eslint-remote-tester runner
+        uses: AriPerkkio/eslint-remote-tester-run-action@v3
+
         with:
           # github-token: ${{ secrets.GITHUB_TOKEN }} # Optional
           eslint-args: '--ignore-path=.gitignore --quiet'
           extensions: 'js,jsx,ts,tsx'
           annotations: true
+
+
